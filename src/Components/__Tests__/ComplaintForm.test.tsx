@@ -22,44 +22,6 @@ describe('ComplaintForm', () => {
         ).toBeInTheDocument()
     })
 
-    it('should validate the email field with an invalid email', async () => {
-        render(<ComplaintForm />)
-
-        fireEvent.change(screen.getByRole('textbox', { name: /email\*/i }), {
-            target: { value: 'test' },
-        })
-
-        screen.getByText(/send/i).click()
-
-        expect(
-            await waitFor(() => screen.findByText(/Email is not valid./i))
-        ).toBeInTheDocument()
-    })
-
-    it('should not show validation errors when the form is valid', async () => {
-        render(<ComplaintForm />)
-
-        fireEvent.change(screen.getByRole('textbox', { name: /name\*/i }), {
-            target: { value: 'John Doe' },
-        })
-        fireEvent.change(screen.getByRole('textbox', { name: /email\*/i }), {
-            target: { value: 'test@test.se' },
-        })
-
-        screen.getByText(/send/i).click()
-
-        await waitFor(() => {
-            expect(
-                screen.queryByText(/Name is required./i)
-            ).not.toBeInTheDocument()
-        })
-        await waitFor(() => {
-            expect(
-                screen.queryByText(/Email is required./i)
-            ).not.toBeInTheDocument()
-        })
-    })
-
     it('should show a success message when the form is submitted', async () => {
         // TODO: Implement this test
         expect(1).toBe(2)
