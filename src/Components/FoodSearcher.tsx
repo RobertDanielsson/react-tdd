@@ -20,7 +20,7 @@ const FoodSearcher = ({ availableFoods, onFoodSelect }: FoodSearcherProps) => {
     }
 
     return (
-        <Box>
+        <Box textAlign="center">
             <TextField
                 sx={{ mb: 2 }}
                 label="Search for a food"
