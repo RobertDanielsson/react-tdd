@@ -34,7 +34,6 @@ const ComplaintForm = ({}: ComplainFormProps) => {
 
     const handleFormSubmit = (data: ComplaintFormData) => {
         // TODO: Submit this complaint email to the intern who broke our code
-
         // TODO: Reset the form after submission
         setOpen(true)
     }
