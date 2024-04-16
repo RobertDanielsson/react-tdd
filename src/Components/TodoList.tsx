@@ -1,3 +1,5 @@
+import './TodoList.css'
+
 export interface Todo {
     id: number
     title: string
