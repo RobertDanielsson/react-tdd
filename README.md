@@ -29,6 +29,7 @@ This application is a simple React and TypeScript project designed to help stude
 1. Clone the repository
 2. Install dependencies with `npm install`
 3. Start the development server with `npm start`
+4. Start the test runner via `npm test` OR preferably by installing `Jest and Jest Runner` in VSCODE
 
 ## Running Tests
 
