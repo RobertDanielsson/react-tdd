@@ -6,15 +6,15 @@ import FoodSearcher from './Components/FoodSearcher'
 
 function App() {
     const availableFoods = [
-        'Apple',
-        'Banana',
-        'Orange',
-        'Pineapple',
-        'Strawberry',
+        'Hamburger',
+        'Sushi',
+        'Körv',
+        'Kebab',
+        'Chili con carne',
     ]
 
     return (
-        <Grid container spacing={10}>
+        <Grid container spacing={10} py={5}>
             <Grid item xs={12}>
                 <FoodSearcher
                     availableFoods={availableFoods}
