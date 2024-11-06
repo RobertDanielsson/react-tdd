@@ -30,9 +30,7 @@ const TodoList = () => {
     const handleCompleteTodo = (id: number) => {
         setTodos(
             todos.map((todo) =>
-                todo.id === id
-                    ? { ...todo, isCompleted: !todo.isCompleted }
-                    : todo
+                todo.id === id ? { ...todo, isCompleted: true } : todo
             )
         )
     }
