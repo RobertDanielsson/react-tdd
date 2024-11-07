@@ -76,13 +76,9 @@ describe('ComplaintForm', () => {
             expect(
                 screen.getByRole('textbox', { name: /name\*/i })
             ).toHaveValue('')
-        })
-        await waitFor(() => {
             expect(
                 screen.getByRole('textbox', { name: /email\*/i })
             ).toHaveValue('')
-        })
-        await waitFor(() => {
             expect(
                 screen.getByRole('textbox', { name: /message/i })
             ).toHaveValue('')
